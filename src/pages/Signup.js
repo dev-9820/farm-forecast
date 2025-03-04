@@ -14,7 +14,7 @@ const Signup = () => {
   // Step 1: Send OTP
   const handleSendOtp = async () => {
     try {
-      await axios.post("http://localhost:4000/api/auth/send-otp", { email });
+      await axios.post("https://farm-forecast-backend.onrender.com/api/auth/send-otp", { email });
       setMessage("OTP sent to your email.");
       setStep(2); // Move to the OTP verification step
     } catch (error) {
@@ -25,7 +25,7 @@ const Signup = () => {
   // Step 2: Verify OTP
   const handleVerifyOtp = async () => {
     try {
-      await axios.post("http://localhost:4000/api/auth/verify-otp", { email, otp, password, role });
+      await axios.post("https://farm-forecast-backend.onrender.com/api/auth/verify-otp", { email, otp, password, role });
       setMessage("Signup successful!");
       navigate("/login"); // Redirect to the login page
     } catch (error) {
