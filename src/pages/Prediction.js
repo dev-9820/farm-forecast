@@ -42,7 +42,7 @@ const Prediction = () => {
     console.log("Sending data:", data);
 
     try {
-      const res = await axios.post("https://a300-35-204-159-198.ngrok-free.app/predict", data);
+      const res = await axios.post("https://agrihortiml.onrender.com/predict", data);
       setResponse(res.data); // Axios automatically parses the JSON
       console.log("Received data:", res.data);
     } catch (error) {
