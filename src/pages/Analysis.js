@@ -47,7 +47,7 @@ const Analysis = () => {
     console.log("Sending data:", data);
 
     try {
-      const res = await axios.post("https://crops-ohs9.onrender.com/analysis", data);
+      const res = await axios.post("https://crops-3tnl.onrender.com/analysis", data);
       setResponse(res.data); // Axios automatically parses the JSON
       console.log("Received data:", res.data);
     } catch (error) {
