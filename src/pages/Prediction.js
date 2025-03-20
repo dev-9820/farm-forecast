@@ -42,7 +42,7 @@ const Prediction = () => {
     console.log("Sending data:", data);
 
     try {
-      const res = await axios.post("http://127.0.0.1:8000/predict", data);
+      const res = await axios.post("https://crops-ohs9.onrender.com/predict", data);
       setResponse(res.data); // Axios automatically parses the JSON
       console.log("Received data:", res.data);
     } catch (error) {
